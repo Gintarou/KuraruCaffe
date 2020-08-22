@@ -1,0 +1,19 @@
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+/* midium screen */
+@media (min-width: 600px) {
+  .container {
+    width: 600px;
+  }
+}
+
+/* large screen */
+@media screen and (min-width: 960px) {
+  .container {
+    width: 950px;
+  }
+}

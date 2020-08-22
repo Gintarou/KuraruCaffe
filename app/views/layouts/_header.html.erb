@@ -1,4 +1,34 @@
-<%= link_to "a", root_path %>
-<%= link_to "a", about_path %>
-<%= link_to "a", contact_path %>
-<%= link_to "a", rental_path %>
+<header>
+  <div id="header_container">
+    <h1><%= link_to "KuraruCaffe", root_path %></h1>
+    <nav id="public_nav">
+      <ul>
+        <li><%= link_to "HOME", root_path %></li>
+        <li><%= link_to "ABOUT", about_path %></li>
+        <li><%= link_to "MENU", root_path %></li>
+        <li><%= link_to "RENTAL", rental_path %></li>
+        <li><%= link_to "EVENT", "https://www.facebook.com/pages/Kuraru-Cafe/2372997022732741", target: :_blank %></li>
+      </ul>
+    </nav>
+
+    <div class="ham" id="ham">
+      <span class="ham_line ham_line1"></span>
+      <span class="ham_line ham_line2"></span>
+      <span class="ham_line ham_line3"></span>
+    </div>
+    <nav>
+      <div class="ham_menu_wrapper" id="ham_menu_wrapper">
+        <div class="ham_menu">
+          <ul id="ham_ul">
+            <li><%= link_to "HOME", root_path %></li>
+            <li><%= link_to "ABOUT", about_path %></li>
+            <li><%= link_to "MENU", root_path %></li>
+            <li><%= link_to "RENTAL", rental_path %></li>
+            <li><%= link_to "EVENT", "https://www.facebook.com/pages/Kuraru-Cafe/2372997022732741", target: :_blank %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</header>

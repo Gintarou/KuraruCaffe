@@ -1,0 +1,162 @@
+header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 100;
+}
+
+#public_nav {
+  display: none;
+}
+
+#ham {
+  display: block;
+}
+
+#header_container {
+  width: 95%;
+  position: relative;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  > h1 {
+    font-size: 24px;
+  }
+}
+
+.ham {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+  right: 0;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.ham_line {
+	position: absolute;
+	right: 17.5px;
+	width: 32px;
+	height: 2px;
+	background-color: #333333;
+  transition: all 0.3s;
+}
+
+.ham_line1 {
+	top: 17px;
+}
+
+.ham_line2 {
+	top: 30px;
+}
+
+.ham_line3 {
+	top: 43px;
+}
+
+.clicked .ham_line1 {
+	transform: rotate(45deg);
+	top: 30px;
+}
+.clicked .ham_line2 {
+	width: 0px;
+}
+.clicked .ham_line3 {
+	transform: rotate(-45deg);
+	top: 30px;
+}
+
+.ham_menu {
+  margin-top: 30px;
+	position: fixed;
+	width: 180px;
+	height: calc(100% - 60px);
+  right: -800px;
+	background-color: rgba(30, 30, 30, 0.95);
+	transition: all 0.3s;
+}
+
+.clicked .ham_menu {
+	right: -2px;
+}
+
+#ham_ul{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  > li {
+    display: flex;
+    color: white;
+  }
+}
+
+
+/* midium screen */
+@media (min-width: 560px) {
+  #ham, #ham_menu_wrapper {
+    display: none;
+  }
+
+  #header_container {
+    width: 90%;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-around;
+    > h1 {
+      width: 30%;
+      padding-left: 0;
+      font-size: 28px;
+    }
+    > #public_nav {
+      display: block;
+      width: 60%;
+      > ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        > li {
+          font-size: 13px;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+  }
+}
+
+/* large screen */
+@media screen and (min-width: 1100px) {
+  #ham {
+    display: none;
+  }
+
+  #header_container {
+    width: 1100px;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    > h1 {
+      width: 50%;
+      padding-left: 20px;
+      font-size: 40px;
+    }
+    > #public_nav {
+      display: block;
+      width: 50%;
+      > ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        > li {
+          font-size: 14px;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+  }
+}
